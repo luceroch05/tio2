@@ -1,6 +1,7 @@
 //import java.awt.*;
 //import java.sql.Date;
 import java.awt.event.*;
+import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -34,6 +35,7 @@ public class App {
         panelprincipal=new JPanel();
         panelprincipal.setBounds(0,0,400,600);
         panelprincipal.setLayout(null);
+        panelprincipal.setBackground(new Color(247, 239,234));
         frame.add(panelprincipal);
 
         lbl=new JLabel("Ingrese nombre:");
