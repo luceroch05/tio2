@@ -38,7 +38,7 @@ public class App {
         panelprincipal.setBackground(new Color(247, 239,234));
         frame.add(panelprincipal);
 
-        lbl=new JLabel("No ingrese:");
+        lbl=new JLabel("Ingrese nombre:");
         lbl.setBounds(50,60,200,30);
         lbl.setFont(f1);
         panelprincipal.add(lbl);
