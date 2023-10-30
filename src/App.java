@@ -19,7 +19,7 @@ public class App {
     tabla tab;
     JTable table;
     DefaultTableModel modelo;
-    Font f1 = new Font("Times New Roman", 2,16);
+    Font f1 = new Font("Monospace", 2,16);
     Color c1 = new Color(134,28,56);
     Border bor1 = BorderFactory.createLineBorder(c1, 0);
     
