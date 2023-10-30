@@ -34,7 +34,7 @@ public class App {
         panelprincipal.setLayout(null);
         frame.add(panelprincipal);
 
-        lbl=new JLabel("Ingrese nombre:");
+        lbl=new JLabel("porfavor kiero conocer caibl:");
         lbl.setBounds(50,60,200,30);
         panelprincipal.add(lbl);
 
