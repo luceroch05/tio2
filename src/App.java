@@ -4,7 +4,9 @@ import java.awt.event.*;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;
+import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.BorderFactory;
 
 public class App {
     App app;
@@ -17,9 +19,9 @@ public class App {
     tabla tab;
     JTable table;
     DefaultTableModel modelo;
-    Font f1 = new Font("Times New Roman", 0,15);
-
-    
+    Font f1 = new Font("Times New Roman", 2,16);
+    Color c1 = new Color(134,28,56);
+    Border bor1 = BorderFactory.createLineBorder(c1, 0);
     
     public App() {
        
@@ -41,15 +43,18 @@ public class App {
         lbl=new JLabel("Ingrese nombre:");
         lbl.setBounds(50,60,200,30);
         lbl.setFont(f1);
+        lbl.setForeground(c1);;
         panelprincipal.add(lbl);
 
         txtnombre=new JTextField();
         txtnombre.setBounds(50,90,200,30);
+        txtnombre.setBorder(bor1);
         txtnombre.setFont(f1);
         panelprincipal.add(txtnombre);
 
         lbl=new JLabel("Direccion:");
         lbl.setBounds(50,130,150,30);
+        lbl.setForeground(c1);
         lbl.setFont(f1);
 
         panelprincipal.add(lbl);
@@ -57,33 +62,40 @@ public class App {
         txtdireccion= new JTextField();
         txtdireccion.setBounds(50,160,200,30);
         txtdireccion.setFont(f1);
+        txtdireccion.setBorder(bor1);
         panelprincipal.add(txtdireccion);
 
         lbl=new JLabel("Teléfono:");
         lbl.setBounds(50,200,150,30);
         lbl.setFont(f1);
+        lbl.setForeground(c1);
         panelprincipal.add(lbl);
 
         txttelefono= new JTextField();
         txttelefono.setBounds(50,230,200,30);
+        txttelefono.setBorder(bor1);
         panelprincipal.add(txttelefono);
 
         lbl=new JLabel("DNI:");
         lbl.setBounds(50,270,200,30);
         lbl.setFont(f1);
+        lbl.setForeground(c1);
         panelprincipal.add(lbl);
 
         txtdni= new JTextField();
         txtdni.setBounds(50,300,200,30);
+        txtdni.setBorder(bor1);
         panelprincipal.add(txtdni);
 
         lbl=new JLabel("Fecha de nacimiento:");
         lbl.setBounds(50,340,150,30);
         lbl.setFont(f1);
+        lbl.setForeground(c1);
         panelprincipal.add(lbl);
 
         txtnacimiento= new JTextField();
         txtnacimiento.setBounds(50,370,200,30);
+        txtnacimiento.setBorder(bor1);
         panelprincipal.add(txtnacimiento);
 
 
@@ -99,7 +111,11 @@ public class App {
             }                
                
             
-        });        
+        });     
+        btnProcesar.setFont(f1);
+        btnProcesar.setForeground(new Color(247, 239,234)); 
+        btnProcesar.setBackground(c1);
+        btnProcesar.setBorder(bor1);  
         panelprincipal.add(btnProcesar);
 
 
