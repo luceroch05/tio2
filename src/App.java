@@ -1,7 +1,7 @@
 //import java.awt.*;
 //import java.sql.Date;
 import java.awt.event.*;
-
+import java.awt.Font;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
@@ -16,6 +16,8 @@ public class App {
     tabla tab;
     JTable table;
     DefaultTableModel modelo;
+    Font f1 = new Font("Times New Roman", 0,15);
+
     
     
     public App() {
@@ -36,22 +38,28 @@ public class App {
 
         lbl=new JLabel("Ingrese nombre:");
         lbl.setBounds(50,60,200,30);
+        lbl.setFont(f1);
         panelprincipal.add(lbl);
 
         txtnombre=new JTextField();
         txtnombre.setBounds(50,90,200,30);
+        txtnombre.setFont(f1);
         panelprincipal.add(txtnombre);
 
         lbl=new JLabel("Direccion:");
         lbl.setBounds(50,130,150,30);
+        lbl.setFont(f1);
+
         panelprincipal.add(lbl);
 
         txtdireccion= new JTextField();
         txtdireccion.setBounds(50,160,200,30);
+        txtdireccion.setFont(f1);
         panelprincipal.add(txtdireccion);
 
         lbl=new JLabel("Teléfono:");
         lbl.setBounds(50,200,150,30);
+        lbl.setFont(f1);
         panelprincipal.add(lbl);
 
         txttelefono= new JTextField();
@@ -60,6 +68,7 @@ public class App {
 
         lbl=new JLabel("DNI:");
         lbl.setBounds(50,270,200,30);
+        lbl.setFont(f1);
         panelprincipal.add(lbl);
 
         txtdni= new JTextField();
@@ -68,6 +77,7 @@ public class App {
 
         lbl=new JLabel("Fecha de nacimiento:");
         lbl.setBounds(50,340,150,30);
+        lbl.setFont(f1);
         panelprincipal.add(lbl);
 
         txtnacimiento= new JTextField();
