@@ -30,11 +30,7 @@ public class tabla {
             fechaproximo=fechaproximo.plusYears(1);
 
         }
-
-        dias=ChronoUnit.DAYS.between(fechaproximo, fechanow);
-
-        
-        
+        dias=(ChronoUnit.DAYS.between(fechaproximo, fechanow))*-1;
 
        modelo.addRow(new Object[]{nombres,direccion,telefono,dni,nacimiento,dias});
     }
