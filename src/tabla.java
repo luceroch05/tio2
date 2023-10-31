@@ -16,7 +16,7 @@ public class tabla {
     
     public void agregandofilas(String nombres,String direccion,String telefono,String dni, String nacimiento) {
     //calcular dias happy
-    LocalDate fechahappy, fechahappyActual,fechanow;
+    LocalDate fechahappy, fechaproximo,fechanow;
     DateTimeFormatter entrafecha = DateTimeFormatter.ofPattern("dd/MM/yyyy");
    // DateTimeFormatter salidafecha= DateTimeFormatter.ofPattern("dd/MM");
 
@@ -25,8 +25,13 @@ public class tabla {
         fechanow = LocalDate.now();
         
         // Obtener cumpleaños del año actual
-        fechahappyActual = LocalDate.of(fechanow.getYear(), fechahappy.getMonth(), fechahappy.getDayOfMonth());
-        dias=ChronoUnit.DAYS.between(fechahappyActual, fechanow);
+       fechaproximo = fechahappy.withYear(fechanow.getYear());
+        if (fechaproximo.isBefore(fechanow)|| fechaproximo.isEqual(fechanow)){
+            fechaproximo=fechaproximo.plusYears(1);
+
+        }
+
+        dias=ChronoUnit.DAYS.between(fechaproximo, fechanow);
 
         
         
