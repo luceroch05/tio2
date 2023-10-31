@@ -6,8 +6,7 @@ import java.awt.Font;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.BorderFactory;
-
+import java.awt.*;
 public class App {
     App app;
     JFrame frame;
@@ -19,15 +18,16 @@ public class App {
     tabla tab;
     JTable table;
     DefaultTableModel modelo;
-    Font f1 = new Font("Monospace", 2,16);
-    Color c1 = new Color(134,28,56);
+    Font f1 = new Font("Gill Sans MT", 0,16);
+    Color c1 = new Color(134,28,57);
     Border bor1 = BorderFactory.createLineBorder(c1, 0);
-    
+    Dimension medPantalla = Toolkit.getDefaultToolkit().getScreenSize();
+
     public App() {
        
 
         frame= new JFrame();
-        frame.setSize(400,600);
+        frame.setSize(medPantalla.width, medPantalla.height);
         frame.setVisible(true);
         frame.setLayout(null);
         frame.setLocationRelativeTo(null);
